@@ -46,8 +46,10 @@ class CartridgesTest extends TestCase
      public static function provideCartridgesFails(): array
      {
         return [
-            [0], [1], [2], [3], [4],        // Invalid equivalence partition: 0-4
-            [-1], [-10], [-167]             // Edge cases
+            [-15], [-2], [-1],      // Invalid equivalence partition: -MIN INTEGER - -1
+            [0],                    // Invalid equivalence partition: 0
+            [1], [2], [3], [4],     // Invalid equivalence partition: 1-4
+            [-10], [-167]           // Edge cases
         ];
      }
 }
