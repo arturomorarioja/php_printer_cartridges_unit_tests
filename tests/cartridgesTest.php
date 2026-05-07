@@ -7,9 +7,17 @@ require_once 'cartridges/cartridges.php';
 
 class CartridgesTest extends TestCase
 {
+
     /**
-     * Positive testing
+     * Black-Box test design
+     * - Equivalence partitions
+     * - Boundary values
+     * - Edge cases
      */
+
+    /*
+        Positive testing
+    */
 
     #[DataProvider('provideCartridgesPasses')]
     public function testCartridgesPasses(int $cartridges, float $discount): void
@@ -33,9 +41,9 @@ class CartridgesTest extends TestCase
         ];
     }
     
-    /**
-     * Negative testing
-     */
+    /*
+        Negative testing
+    */
 
      #[DataProvider('provideCartridgesFails')]
      public function testCartridgesFails(int $cartridges): void
